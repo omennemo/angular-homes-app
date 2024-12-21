@@ -27,6 +27,6 @@ export class HomeComponent {
 
   filterResults(city: string) {
     if (!city) {this.filteredLocationList = this.housingLocationList; return;}
-    this.filteredLocationList = this.housingLocationList.filter(location => location.city.toLowerCase() === city.toLowerCase());
+    this.filteredLocationList = this.housingLocationList.filter(location => location.city.toLowerCase().startsWith(city.toLowerCase()));
   }
 }
